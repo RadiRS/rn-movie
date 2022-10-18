@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render component correcly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#212529",
+        "fontFamily": "SourceSansPro-Regular",
+        "fontSize": 16,
+        "textAlign": "left",
+      },
+      undefined,
+    ]
+  }
+/>
+`;
