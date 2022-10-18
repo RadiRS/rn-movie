@@ -15,15 +15,15 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "RN Boilerplate Dev.app"
-               BlueprintName = "RNB"
-               ReferencedContainer = "container:RNB.xcodeproj">
+               BuildableName = "Mooviee Dev.app"
+               BlueprintName = "Mooviee"
+               ReferencedContainer = "container:Mooviee.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "DebugStag"
+      buildConfiguration = "DebugProd"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "DebugStag"
+      buildConfiguration = "DebugProd"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -45,14 +45,23 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RN Boilerplate Dev.app"
-            BlueprintName = "RNB"
-            ReferencedContainer = "container:RNB.xcodeproj">
+            BuildableName = "Mooviee Dev.app"
+            BlueprintName = "Mooviee"
+            ReferencedContainer = "container:Mooviee.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "Mooviee Dev.app"
+            BlueprintName = "Mooviee"
+            ReferencedContainer = "container:Mooviee.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "ReleaseStag"
+      buildConfiguration = "ReleaseProd"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -62,17 +71,17 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RN Boilerplate Dev.app"
-            BlueprintName = "RNB"
-            ReferencedContainer = "container:RNB.xcodeproj">
+            BuildableName = "Mooviee Dev.app"
+            BlueprintName = "Mooviee"
+            ReferencedContainer = "container:Mooviee.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "DebugStag">
+      buildConfiguration = "DebugProd">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "ReleaseStag"
+      buildConfiguration = "ReleaseProd"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -1,4 +1,4 @@
-package com.rnb.rnboilerplate.newarchitecture.modules;
+package com.example.mooviee.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

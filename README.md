@@ -1,12 +1,12 @@
-# React Native Boilerplate
+# React Native Movie Apps
 
 ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![CI](https://github.com/RadiRS/rn-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/RadiRS/rn-boilerplate/actions/workflows/ci.yml)
-[![Android Build](https://github.com/RadiRS/rn-boilerplate/actions/workflows/android-build.yml/badge.svg)](https://github.com/RadiRS/rn-boilerplate/actions/workflows/android-build.yml)
-[![iOS Build](https://github.com/RadiRS/rn-boilerplate/actions/workflows/ios-build.yml/badge.svg)](https://github.com/RadiRS/rn-boilerplate/actions/workflows/ios-build.yml)
+[![CI](https://github.com/RadiRS/rn-movie/actions/workflows/ci.yml/badge.svg)](https://github.com/RadiRS/rn-movie/actions/workflows/ci.yml)
+[![Android Build](https://github.com/RadiRS/rn-movie/actions/workflows/android-build.yml/badge.svg)](https://github.com/RadiRS/rn-movie/actions/workflows/android-build.yml)
+[![iOS Build](https://github.com/RadiRS/rn-movie/actions/workflows/ios-build.yml/badge.svg)](https://github.com/RadiRS/rn-movie/actions/workflows/ios-build.yml)
 
-This is a boilerplate for react native project which is include some configuration
+This project was created for Populix Front-End entry test.
 
 ## Getting Started
 
@@ -27,11 +27,11 @@ A step by step series of examples that tell you how to get a development env run
 Clone the repository via http or ssh
 
 ```
-git clone https://github.com/RadiRS/rn-boilerplate.git your_app_name
+git clone https://github.com/RadiRS/rn-movie.git your_app_name
 ```
 
 ```
-git clone git@github.com:RadiRS/rn-boilerplate.git your_app_name
+git clone git@github.com:RadiRS/rn-movie.git your_app_name
 ```
 
 Enter into project directory and install all dependencies
@@ -46,21 +46,6 @@ Run the project via command line
 yarn android   //android
 yarn ios       //ios
 ```
-
-Change app name or bundle identifier with [react-native-rename](https://github.com/junedomingo/react-native-rename)
-
-```
-yarn react-native-rename "My App" -b com.example.myapp
-```
-
-Splash screen generator with [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash)
-
-```
-yarn react-native generate-bootsplash src/assets/images/logo.png \
-  --background-color=212529
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 <p>&nbsp;</p>
 
@@ -114,7 +99,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/RadiRS/rn-boilerplate/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/RadiRS/rn-movie/tags).
 
 <p>&nbsp;</p>
 
@@ -122,19 +107,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **Radi Rusadi** - _Initial work_ - [RadiRS](https://github.com/RadiRS)
 
-See also the list of [contributors](https://github.com/RadiRS/rn-boilerplate/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/RadiRS/rn-movie/contributors) who participated in this project.
 
 <p>&nbsp;</p>
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-<p>&nbsp;</p>
-
-## Acknowledgments
-
-- [React Native Boilerplate The Coding Machine](https://thecodingmachine.github.io/react-native-boilerplate)
-- [React Native Template Obytes](https://github.com/obytes/react-native-template-obytes)
-- [React Native UI Kitten](https://akveo.github.io/react-native-ui-kitten)
-- [React Native Testing](https://reactnativetesting.io/e2e/intro)

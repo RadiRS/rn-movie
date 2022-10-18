@@ -1,4 +1,4 @@
-package com.rnb.rnboilerplate;
+package com.example.mooviee;
 
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
