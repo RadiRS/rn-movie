@@ -13,7 +13,6 @@ import { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-// @refresh reset
 const RootNavigator = () => {
   const { darkMode, NavigationTheme, Layout, Colors } = useTheme();
 

@@ -1,17 +1,17 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import Config from '@/config/env';
 import { useTheme } from '@/hooks';
 import { ThemeVariables } from '@/types/theme';
-import { Text } from '@/components/ui';
+import { Text, View } from '@/components/ui';
 
 const HeaderSection = () => {
   const themes = useTheme();
   const extStyle = styles(themes);
 
   return (
-    <View style={extStyle.container}>
+    <View padder style={extStyle.container}>
       <Text variant="title-regular" appearance="alternative">
         Header Section
       </Text>
@@ -31,9 +31,7 @@ const HeaderSection = () => {
 const styles = (themes: ThemeVariables) =>
   StyleSheet.create({
     container: {
-      padding: 20,
       backgroundColor: themes.Colors.primary,
-      borderRadius: 20,
       height: 200,
       justifyContent: 'center',
       alignItems: 'center',
