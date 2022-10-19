@@ -1,41 +1,43 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
-import Config from '@/config/env';
 import { useTheme } from '@/hooks';
-import { ThemeVariables } from '@/types/theme';
-import { Text, View } from '@/components/ui';
+import { Text, View, Input } from '@/components/ui';
 
 const HeaderSection = () => {
-  const themes = useTheme();
-  const extStyle = styles(themes);
+  const { t } = useTranslation();
+  const styles = useStyles();
 
   return (
-    <View padder style={extStyle.container}>
-      <Text variant="title-regular" appearance="alternative">
-        Header Section
+    <View style={styles.container}>
+      <Text variant="title-large" status="control">
+        {t('welcome')}.
       </Text>
-      <Text variant="title-small" appearance="alternative">
-        Environment: {Config.ENV}
+      <Text variant="title-small" status="control">
+        {t('welcomeSubtitle')}
       </Text>
-      <Text variant="small" appearance="alternative">
-        API_URL: {Config.API_URL}
-      </Text>
-      <Text variant="small" appearance="alternative">
-        IMG_BASE_URL: {Config.IMG_BASE_URL}
-      </Text>
+      <View style={styles.inputContaienr}>
+        <Input placeholder={t('actions.search')} />
+      </View>
     </View>
   );
 };
 
-const styles = (themes: ThemeVariables) =>
-  StyleSheet.create({
+const useStyles = () => {
+  const { Colors, MetricsSizes } = useTheme();
+
+  return StyleSheet.create({
     container: {
-      backgroundColor: themes.Colors.primary,
-      height: 200,
+      backgroundColor: Colors.primary,
       justifyContent: 'center',
-      alignItems: 'center',
+      paddingVertical: MetricsSizes.large,
+      paddingHorizontal: MetricsSizes.regular,
+    },
+    inputContaienr: {
+      paddingVertical: MetricsSizes.regular,
     },
   });
+};
 
 export default HeaderSection;

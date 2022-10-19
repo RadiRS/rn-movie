@@ -21,7 +21,7 @@ const View: React.FC<ViewProps> = ({
   const styles = useStyles(props);
 
   return (
-    <RNView style={[style, styles.container]} {...props}>
+    <RNView style={[styles.container, style]} {...props}>
       {children}
     </RNView>
   );
