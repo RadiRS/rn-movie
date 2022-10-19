@@ -1,4 +1,5 @@
 import React from 'react';
+import { IMG_BASE_URL } from '@env';
 import {
   Image,
   ListRenderItem,
@@ -8,40 +9,46 @@ import {
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
+import { Movie, useGetMoviesQuery } from '@/services/movie';
 import { useTheme } from '@/hooks';
 import { View, Text, FlatList } from '@/components/ui';
 
 interface MovieSectionProps {
   title: string;
+  section: 'popular' | 'upcoming' | 'top_rated' | 'now_playing';
 }
 
 const MovieSection: React.FC<MovieSectionProps> = ({
   title,
+  section,
 }: MovieSectionProps) => {
   const { t } = useTranslation();
-  const data = new Array(5);
   const styles = useStyles();
 
-  const onPressItem = (item: any) => {
-    Alert.alert('item', item);
+  const { data, isSuccess } = useGetMoviesQuery({ path: section });
+
+  const onPressItem = (item: Movie) => {
+    Alert.alert('item', item.title);
   };
 
-  const renderItem: ListRenderItem<any> = ({ item }) => {
+  const renderItem: ListRenderItem<Movie> = ({ item }) => {
+    const imgUrl = `${IMG_BASE_URL}/w300${item.poster_path}`;
+
     return (
       <Pressable
         onPress={() => onPressItem(item)}
         style={styles.listItemContainer}>
         <Image
           source={{
-            uri: 'https://image.tmdb.org/t/p/w500/pHkKbIRoCe7zIFvqan9LFSaQAde.jpg',
+            uri: imgUrl,
           }}
           style={styles.img}
         />
         <View style={styles.itemContentContainer}>
           <Text numberOfLines={1} type="bold">
-            Jujutsu Kaison {item}
+            {item.title}
           </Text>
-          <Text variant="small">Dec 24, 2021</Text>
+          <Text variant="small">{item?.release_date.toString()}</Text>
         </View>
       </Pressable>
     );
@@ -55,12 +62,14 @@ const MovieSection: React.FC<MovieSectionProps> = ({
           <Text>{t('actions.seeAll')}</Text>
         </Pressable>
       </View>
-      <FlatList
-        horizontal
-        data={data}
-        renderItem={renderItem}
-        contentContainerStyle={styles.listContentContainer}
-      />
+      {isSuccess && data?.results.length && (
+        <FlatList
+          horizontal
+          data={data?.results.slice(0, 5)}
+          renderItem={renderItem}
+          contentContainerStyle={styles.listContentContainer}
+        />
+      )}
     </View>
   );
 };

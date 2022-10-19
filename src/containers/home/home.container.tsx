@@ -12,10 +12,10 @@ const HomeContainer = () => {
     <SafeArea>
       <ScrollView>
         <HeaderSection />
-        <MovieSection title={t('labels.whatsPopular')} />
-        <MovieSection title={t('labels.freeToWatch')} />
-        <MovieSection title={t('labels.latestTrailers')} />
-        <MovieSection title={t('labels.trending')} />
+        <MovieSection section="popular" title={t('labels.whatsPopular')} />
+        <MovieSection section="top_rated" title={t('labels.topRated')} />
+        <MovieSection section="upcoming" title={t('labels.upcoming')} />
+        <MovieSection section="now_playing" title={t('labels.nowPlaying')} />
       </ScrollView>
     </SafeArea>
   );
