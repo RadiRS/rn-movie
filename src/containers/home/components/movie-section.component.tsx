@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
-import { Movie, useGetMoviesQuery } from '@/services/movie';
 import { useTheme } from '@/hooks';
+import { Movie, useGetMoviesQuery } from '@/services/movie';
 import { View, Text, FlatList } from '@/components/ui';
 
 interface MovieSectionProps {
@@ -101,7 +101,9 @@ const useStyles = () => {
       marginHorizontal: MetricsSizes.small,
       width: 150,
     },
-    itemContentContainer: {},
+    itemContentContainer: {
+      marginTop: MetricsSizes.tiny,
+    },
   });
 };
 
