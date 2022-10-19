@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
+import Translations from '@/config/translations';
 import { useTheme } from '@/hooks';
 import { changeTheme, ThemeState } from '@/store/theme';
-import Translations from '@/config/translations';
-import { Button, Text, SafeArea } from '@/components/ui';
+
+import { Button, Text, SafeArea, View } from '@/components/ui';
 
 import HeaderSection from './header-section.component';
 

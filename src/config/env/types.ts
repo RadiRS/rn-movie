@@ -7,4 +7,5 @@ export type EnvConfigType = {
   WEB_URL?: string;
   SERVERLESS_URL?: string;
   CLIENT_ID?: string;
+  IMG_BASE_URL?: string;
 };

@@ -1,10 +1,10 @@
-import { View, StyleSheet } from 'react-native';
 import React from 'react';
+import { View, StyleSheet } from 'react-native';
 
 import Config from '@/config/env';
 import { useTheme } from '@/hooks';
-import { Text } from '@/components/ui';
 import { ThemeVariables } from '@/types/theme';
+import { Text } from '@/components/ui';
 
 const HeaderSection = () => {
   const themes = useTheme();
@@ -20,6 +20,9 @@ const HeaderSection = () => {
       </Text>
       <Text variant="small" appearance="alternative">
         API_URL: {Config.API_URL}
+      </Text>
+      <Text variant="small" appearance="alternative">
+        IMG_BASE_URL: {Config.IMG_BASE_URL}
       </Text>
     </View>
   );
