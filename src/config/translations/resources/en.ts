@@ -24,7 +24,8 @@ export default {
     media: 'Media',
     topBilledCast: 'Top Billed Cast',
     fullCastAndCrew: 'Full Cast & Crew',
-    recomenddations: 'Recommendations',
+    recommendations: 'Recommendations',
+    budget: 'Budget',
   },
   titles: {
     popularMovies: 'Popular Movies',

@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { useTheme } from '@/hooks';
-import { HomeContainer } from '@/containers';
+import { HomeContainer, MovieDetailContainer } from '@/containers';
 
 import { navigationRef } from './utils';
 import { RootStackParamList } from './types';
@@ -32,10 +32,17 @@ const RootNavigator = () => {
         theme={NavigationTheme}
         onReady={onReady}>
         <StatusBar barStyle={barStyle} backgroundColor={backgroundColor} />
-        <Stack.Navigator
-          screenOptions={{ headerShown: false }}
-          initialRouteName={initialRouteName}>
-          <Stack.Screen name="Home" component={HomeContainer} />
+        <Stack.Navigator initialRouteName={initialRouteName}>
+          <Stack.Screen
+            name="Home"
+            component={HomeContainer}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="MovieDetail"
+            component={MovieDetailContainer}
+            options={{ headerTitle: 'Movie Detail' }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>

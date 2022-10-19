@@ -24,7 +24,8 @@ export default {
     media: 'Media',
     topBilledCast: 'Pemeran dengan Tagihan Teratas',
     fullCastAndCrew: 'Pemeran & Kru Penuh',
-    recomenddations: 'Rekomendasi',
+    recommendations: 'Rekomendasi',
+    budget: 'Anggaran',
   },
   titles: {
     popularMovies: 'Film Populer',
