@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DEV_API_URL: ${{ secrets.DEV_API_URL }}
+      STAG_API_URL: ${{ secrets.STAG_API_URL }}
+      PROD_API_URL: ${{ secrets.PROD_API_URL }}
+      IMG_BASE_URL: ${{ secrets.IMG_BASE_URL }}
+      API_KEY: ${{ secrets.API_KEY }}
 
     steps:
       - name: Cancel Previous Runs

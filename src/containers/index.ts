@@ -10,3 +10,4 @@ export { default as ButtonPreviewContainer } from './button-preview/button-previ
 export { default as FlatListPreviewContainer } from './flatlist-preview/flatlist-preview.container';
 export { default as WebviewPreviewContainer } from './webview-preview/webview-preview.container';
 export { default as ModalPreviewContainer } from './modal-preview/modal-preview.container';
+export { default as MovieDetailContainer } from './movie-detail/movie-detail.container';

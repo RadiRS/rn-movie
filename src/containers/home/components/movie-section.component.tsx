@@ -1,14 +1,9 @@
 import React from 'react';
 import { IMG_BASE_URL } from '@env';
-import {
-  Image,
-  ListRenderItem,
-  StyleSheet,
-  Pressable,
-  Alert,
-} from 'react-native';
+import { Image, ListRenderItem, StyleSheet, Pressable } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
+import { navigate } from '@/navigators';
 import { useTheme } from '@/hooks';
 import { Movie, useGetMoviesQuery } from '@/services/movie';
 import { View, Text, FlatList } from '@/components/ui';
@@ -28,7 +23,7 @@ const MovieSection: React.FC<MovieSectionProps> = ({
   const { data, isSuccess } = useGetMoviesQuery({ path: section });
 
   const onPressItem = (item: Movie) => {
-    Alert.alert('item', item.title);
+    navigate('MovieDetail', { id: item.id });
   };
 
   const renderItem: ListRenderItem<Movie> = ({ item }) => {
