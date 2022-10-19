@@ -1,13 +1,22 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { SafeArea } from '@/components/ui';
+import { SafeArea, ScrollView } from '@/components/ui';
 
-import HeaderSection from './header-section.component';
+import HeaderSection from './components/header-section.component';
+import MovieSection from './components/movie-section.component';
 
 const HomeContainer = () => {
+  const { t } = useTranslation();
   return (
     <SafeArea>
-      <HeaderSection />
+      <ScrollView>
+        <HeaderSection />
+        <MovieSection title={t('labels.whatsPopular')} />
+        <MovieSection title={t('labels.freeToWatch')} />
+        <MovieSection title={t('labels.latestTrailers')} />
+        <MovieSection title={t('labels.trending')} />
+      </ScrollView>
     </SafeArea>
   );
 };
