@@ -50,15 +50,6 @@
             ReferencedContainer = "container:Mooviee.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Mooviee Dev.app"
-            BlueprintName = "Mooviee"
-            ReferencedContainer = "container:Mooviee.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "ReleaseStag"

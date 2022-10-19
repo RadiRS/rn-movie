@@ -20,7 +20,7 @@ export const Colors = {
   dark: '#212529',
   textDisabled: '#9C9C9C',
   alternative: '#ffffff',
-  primary: '#3A00E5',
+  primary: 'darkblue',
   secondary: '#F1F1F1',
   hint: '#AFB1B6',
   info: '#8AC0FF',

@@ -1,10 +1,41 @@
 import React from 'react';
-import { View as RNView, ViewProps as RNViewProps } from 'react-native';
+import {
+  StyleSheet,
+  View as RNView,
+  ViewProps as RNViewProps,
+  ViewStyle,
+} from 'react-native';
 
-interface ViewProps extends RNViewProps {}
+import { useTheme } from '@/hooks';
 
-const View: React.FC<ViewProps> = ({ children, ...props }: ViewProps) => {
-  return <RNView {...props}>{children}</RNView>;
+interface ViewProps extends RNViewProps {
+  padder?: boolean;
+  style?: ViewStyle;
+}
+
+const View: React.FC<ViewProps> = ({
+  children,
+  style,
+  ...props
+}: ViewProps) => {
+  const styles = useStyles(props);
+
+  return (
+    <RNView style={[style, styles.container]} {...props}>
+      {children}
+    </RNView>
+  );
+};
+
+const useStyles = (params: ViewProps) => {
+  const { padder } = params;
+  const { MetricsSizes } = useTheme();
+
+  return StyleSheet.create({
+    container: {
+      padding: padder ? MetricsSizes.regular : 0,
+    },
+  });
 };
 
 export default View;

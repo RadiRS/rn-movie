@@ -1,17 +1,17 @@
-import { View, StyleSheet } from 'react-native';
 import React from 'react';
+import { StyleSheet } from 'react-native';
 
 import Config from '@/config/env';
 import { useTheme } from '@/hooks';
-import { Text } from '@/components/ui';
 import { ThemeVariables } from '@/types/theme';
+import { Text, View } from '@/components/ui';
 
 const HeaderSection = () => {
   const themes = useTheme();
   const extStyle = styles(themes);
 
   return (
-    <View style={extStyle.container}>
+    <View padder style={extStyle.container}>
       <Text variant="title-regular" appearance="alternative">
         Header Section
       </Text>
@@ -21,6 +21,9 @@ const HeaderSection = () => {
       <Text variant="small" appearance="alternative">
         API_URL: {Config.API_URL}
       </Text>
+      <Text variant="small" appearance="alternative">
+        IMG_BASE_URL: {Config.IMG_BASE_URL}
+      </Text>
     </View>
   );
 };
@@ -28,9 +31,7 @@ const HeaderSection = () => {
 const styles = (themes: ThemeVariables) =>
   StyleSheet.create({
     container: {
-      padding: 20,
       backgroundColor: themes.Colors.primary,
-      borderRadius: 20,
       height: 200,
       justifyContent: 'center',
       alignItems: 'center',
