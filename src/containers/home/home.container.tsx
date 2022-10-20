@@ -9,7 +9,7 @@ const HomeContainer = () => {
   const { t } = useTranslation();
 
   return (
-    <SafeArea>
+    <SafeArea testID="home-screen">
       <ScrollView>
         <HeaderSection />
         <MovieSection section="popular" title={t('labels.whatsPopular')} />

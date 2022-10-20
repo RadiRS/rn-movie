@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
 import { useTheme } from '@/hooks';
-import { Text, View, Input } from '@/components/ui';
+import { Text, View } from '@/components/ui';
 
 const HeaderSection = () => {
   const { t } = useTranslation();
@@ -17,9 +17,9 @@ const HeaderSection = () => {
       <Text variant="title-small" status="control">
         {t('welcomeSubtitle')}
       </Text>
-      <View style={styles.inputContaienr}>
+      {/* <View style={styles.inputContainer}>
         <Input placeholder={t('actions.search')} />
-      </View>
+      </View> */}
     </View>
   );
 };
@@ -34,7 +34,7 @@ const useStyles = () => {
       paddingVertical: MetricsSizes.large,
       paddingHorizontal: MetricsSizes.regular,
     },
-    inputContaienr: {
+    inputContainer: {
       paddingVertical: MetricsSizes.regular,
     },
   });
