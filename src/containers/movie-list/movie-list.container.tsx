@@ -89,15 +89,15 @@ const MovieListContainer = () => {
   };
 
   return (
-    <SafeArea style={styles.container}>
+    <SafeArea>
       <FlatList
         data={movies}
         style={styles.listContentContainer}
+        refreshing={isLoading}
         renderItem={renderItem}
         ListFooterComponent={renderFooter}
         onEndReached={onEndReached}
         onRefresh={onRefresh}
-        refreshing={isLoading}
         onEndReachedThreshold={0.3}
       />
       <Spinner isFull={isLoading} />

@@ -1,8 +1,8 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import { baseQueryWithInterceptor } from './interceptor';
+import { baseQuery } from './interceptor';
 
 export const api = createApi({
-  baseQuery: baseQueryWithInterceptor,
+  baseQuery,
   endpoints: () => ({}),
 });

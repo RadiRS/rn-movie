@@ -13,7 +13,6 @@ import {
 
 import { api } from '@/services/api';
 import rootReducers from './root-reducers';
-import { todoApi } from '@/services/todo';
 
 const store = configureStore({
   reducer: rootReducers,
@@ -22,7 +21,7 @@ const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(api.middleware, todoApi.middleware);
+    }).concat(api.middleware);
 
     return middlewares;
   },
