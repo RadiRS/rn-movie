@@ -24,7 +24,7 @@ const MovieDetailContainer = () => {
   const { data, isLoading } = useGetMovieQuery(id);
 
   return (
-    <SafeArea style={styles.container}>
+    <SafeArea testID="movie-detail-screen" style={styles.container}>
       <ScrollView>
         <BannerSection data={data} />
         <View padder>

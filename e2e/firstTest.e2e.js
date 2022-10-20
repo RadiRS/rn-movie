@@ -1,4 +1,4 @@
-const waitToNavigate = duration =>
+const waitTo = duration =>
   new Promise(resolve => setTimeout(() => resolve(), duration));
 
 describe('Example E2E Testing', () => {
@@ -6,23 +6,13 @@ describe('Example E2E Testing', () => {
     await device.launchApp();
   });
 
-  it('should have welcome screen', async () => {
-    // await expect(element(by.id('welcome'))).toBeVisible();
-  });
-
   it('should have home screen', async () => {
-    await waitToNavigate(1300);
-    await expect(element(by.text('Header Section'))).toBeVisible();
+    await expect(element(by.id('home-screen'))).toBeVisible();
   });
 
-  it('should press change theme between dark and light', async () => {
-    await element(by.id('dark-button')).tap();
-    await element(by.id('light-button')).tap();
-  });
-
-  it('should navigate between tab screen', async () => {
-    await element(by.text('Preview')).tap();
-    await element(by.text('User')).tap();
-    await element(by.text('Home')).tap();
+  it('should navigate to movie detail screen', async () => {
+    await waitTo(500);
+    await element(by.id('item-0-popular')).tap();
+    await expect(element(by.id('movie-detail-screen'))).toBeVisible();
   });
 });

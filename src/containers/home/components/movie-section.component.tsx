@@ -30,11 +30,12 @@ const MovieSection: React.FC<MovieSectionProps> = ({
     navigate('MovieList', { path: section });
   };
 
-  const renderItem: ListRenderItem<Movie> = ({ item }) => {
+  const renderItem: ListRenderItem<Movie> = ({ item, index }) => {
     const imgUrl = `${IMG_BASE_URL}/w300${item.poster_path}`;
 
     return (
       <Pressable
+        testID={`item-${index}-${section}`}
         onPress={() => onPressItem(item)}
         style={styles.listItemContainer}>
         <Image
