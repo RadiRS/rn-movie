@@ -11,3 +11,4 @@ export { default as FlatListPreviewContainer } from './flatlist-preview/flatlist
 export { default as WebviewPreviewContainer } from './webview-preview/webview-preview.container';
 export { default as ModalPreviewContainer } from './modal-preview/modal-preview.container';
 export { default as MovieDetailContainer } from './movie-detail/movie-detail.container';
+export { default as MovieListContainer } from './movie-list/movie-list.container';

@@ -26,6 +26,10 @@ const MovieSection: React.FC<MovieSectionProps> = ({
     navigate('MovieDetail', { id: item.id });
   };
 
+  const onPressMore = () => {
+    navigate('MovieList', { path: section });
+  };
+
   const renderItem: ListRenderItem<Movie> = ({ item }) => {
     const imgUrl = `${IMG_BASE_URL}/w300${item.poster_path}`;
 
@@ -53,14 +57,14 @@ const MovieSection: React.FC<MovieSectionProps> = ({
     <View style={styles.container}>
       <View style={styles.titleContainer}>
         <Text variant="title-small">{title}</Text>
-        <Pressable>
+        <Pressable onPress={onPressMore}>
           <Text>{t('actions.seeAll')}</Text>
         </Pressable>
       </View>
       {isSuccess && data?.results.length && (
         <FlatList
           horizontal
-          data={data?.results.slice(0, 5)}
+          data={data?.results.slice(0, 10)}
           renderItem={renderItem}
           contentContainerStyle={styles.listContentContainer}
         />

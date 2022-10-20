@@ -18,4 +18,8 @@ export type RootStackParamList = {
   WebviewPreviewContainer: undefined;
   ModalPreviewContainer: undefined;
   MovieDetail: undefined;
+  MovieList: {
+    path: string | undefined;
+    query: string | undefined;
+  };
 };
