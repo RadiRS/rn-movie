@@ -87,9 +87,10 @@ Setup your iOS app by follow [this](https://reactnative.dev/docs/publishing-to-a
 
 ## Built With
 
-- [React Native](https://facebook.github.io/react-native/) - The mobile framework used
-- [React Navigation](https://reactnavigation.org/) - Routing and navigation for your React Native apps
+- [React Native](https://facebook.github.io/react-native) - The mobile framework used
+- [React Navigation](https://reactnavigation.org) - Routing and navigation for your React Native apps
 - [Redux Toolkit](https://redux-toolkit.js.org) - Toolset for efficient Redux development
+- [The Movie Database API](https://developers.themoviedb.org) - (TMDB) is a popular, user editable database for movies and TV shows.
 
 <p>&nbsp;</p>
 
